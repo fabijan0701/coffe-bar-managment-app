@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="Entities created&#10;Interface user created">
-      <change afterPath="$PROJECT_DIR$/src/app/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/entities/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/entities/Person.java" afterDir="false" />
-    </list>
+    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="User tests completed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +63,15 @@
       <recent name="test.data" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="JUnit.All in coffee bar managment app">
+    <configuration name="All in coffee bar managment app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coffee bar managment app" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataAccessTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
@@ -116,22 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataAccessTest.connectionNotNull_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="coffee bar managment app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.data" />
-      <option name="MAIN_CLASS_NAME" value="app.data.DataAccessTest" />
-      <option name="METHOD_NAME" value="connectionNotNull_test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
@@ -149,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in coffee bar managment app" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.DataAccessTest.connectionNotNull_test (1)" />
         <item itemvalue="JUnit.DataAccessTest (1)" />
         <item itemvalue="JUnit.DataAccessTest" />
-        <item itemvalue="JUnit.DataAccessTest.connectionNotNull_test" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +164,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1676747414414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="User tests completed">
+      <created>1676749768448</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1676749768448</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +187,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Entities created&#10;Interface user created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entities created&#10;Interface user created" />
+    <MESSAGE value="User tests completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="User tests completed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest__1_.ic" NAME="DataAccessTest (1) Coverage Results" MODIFIED="1676745339583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -207,7 +200,7 @@
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.data.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1676749547348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1676749712145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.entities.*</FILTER>
     </SUITE>
   </component>
