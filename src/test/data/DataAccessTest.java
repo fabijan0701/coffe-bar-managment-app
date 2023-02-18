@@ -11,16 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class DataAccessTest {
 
     @Test
-    void connectionNotNull_test() throws SQLException {
+    void connectionNotNull_test() throws SQLException, ClassNotFoundException {
 
         DataAccess dataAccess = new DataAccess();
-        Connection connection = null;
-        try {
-            connection = dataAccess.getConnection();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
+        Connection connection = dataAccess.getConnection();
         assertNotNull(connection);
     }
 }
