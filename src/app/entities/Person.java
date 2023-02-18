@@ -31,4 +31,17 @@ public interface Person {
      * @param lastName represents last name to be set
      */
     void setLastName(String lastName);
+
+    /**
+     * Returns the actual access key of person instance
+     * @return string that represents the access key
+     */
+    String getAccessKey();
+
+    /**
+     * Sets the access key to user instance
+     * @param lastName represents the access key to be set
+     */
+    void setAccessKey(String lastName);
+
 }
