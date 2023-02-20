@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="545" height="321"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-15458765"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="afa04" class="javax.swing.JLabel">
@@ -13,7 +15,9 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4144960"/>
           <font size="16"/>
+          <foreground color="-4172257"/>
           <text value="User ID:"/>
         </properties>
       </component>
@@ -23,14 +27,19 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4144960"/>
+          <foreground color="-4172257"/>
+        </properties>
       </component>
       <component id="135c2" class="javax.swing.JLabel">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4144960"/>
           <font size="16"/>
+          <foreground color="-4172257"/>
           <text value="Password"/>
         </properties>
       </component>
@@ -40,20 +49,28 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4144960"/>
+          <foreground color="-4172257"/>
+        </properties>
       </component>
       <component id="5fc4f" class="javax.swing.JComboBox" binding="cmbModeSelection">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4144960"/>
+          <foreground color="-4172257"/>
+        </properties>
       </component>
       <component id="a0a8d" class="javax.swing.JLabel">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4144960"/>
           <font size="16"/>
+          <foreground color="-4172257"/>
           <text value="Login mode"/>
         </properties>
       </component>
@@ -62,6 +79,8 @@
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4144960"/>
+          <foreground color="-4172257"/>
           <text value="Login"/>
         </properties>
       </component>
@@ -70,6 +89,8 @@
           <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4144960"/>
+          <foreground color="-4172257"/>
           <text value="Cancel"/>
         </properties>
       </component>
@@ -93,7 +114,9 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4172257"/>
           <font size="24"/>
+          <foreground color="-4172257"/>
           <text value="User Login"/>
         </properties>
       </component>

@@ -27,6 +27,7 @@ public class LoginFrame extends JFrame{
         this.add(controlsContainer);
 
         this.setTitle("User login frame");
+        this.setUndecorated(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(controlsContainer.getSize());
         this.setResizable(false);
