@@ -15,6 +15,8 @@ public class LoginFrame extends JFrame{
 
     public LoginFrame() {
         frameSetup();
+
+        applicationMode = null;
     }
 
     private void frameSetup() {
@@ -34,4 +36,15 @@ public class LoginFrame extends JFrame{
         this.setLocationRelativeTo(null);
     }
 
+    // === Actual code begins there ===
+
+    public Mode applicationMode;
+
+    public Mode getApplicationMode() {
+        return applicationMode;
+    }
+
+    public void setApplicationMode(Mode applicationMode) {
+        this.applicationMode = applicationMode;
+    }
 }

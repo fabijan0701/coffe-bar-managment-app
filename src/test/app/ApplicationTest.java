@@ -28,5 +28,4 @@ class ApplicationTest {
 
         assertEquals(expectedMode, actualMode);
     }
-
 }
