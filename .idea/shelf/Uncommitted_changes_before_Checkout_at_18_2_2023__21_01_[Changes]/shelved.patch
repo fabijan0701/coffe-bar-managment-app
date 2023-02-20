@@ -1,0 +1,31 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -170,7 +170,13 @@
+       <option name="presentableId" value="LOCAL−00003" />
+       <updated>1676749768448</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL−00004" summary="User tests completed">
++      <created>1676750384193</created>
++      <option name="number" value="LOCAL−00004" />
++      <option name="presentableId" value="LOCAL−00004" />
++      <updated>1676750384193</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -197,6 +203,7 @@
+     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest.ic" NAME="DataAccessTest Coverage Results" MODIFIED="1676744628971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>test.data.*</FILTER>
+     </SUITE>
++    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$All_in_coffee_bar_managment_app.ic" NAME="All in coffee bar managment app Coverage Results" MODIFIED="1676749855238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>test.data.*</FILTER>
+     </SUITE>
