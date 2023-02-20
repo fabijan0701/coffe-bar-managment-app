@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="LoginFrame design, Application first tests">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" afterDir="false" />
+    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="LoginFrame design edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/gui/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gui/LoginFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="app-thread" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ApplicationTest" />
-        <item itemvalue="JUnit.ApplicationTest.mode_test" />
-        <item itemvalue="JUnit.All in coffee bar managment app" />
         <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.ApplicationTest.mode_test" />
+        <item itemvalue="JUnit.ApplicationTest" />
+        <item itemvalue="JUnit.All in coffee bar managment app" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +181,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1676926823243</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="LoginFrame design edited">
+      <created>1676928397217</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1676928397217</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +206,8 @@
     <MESSAGE value="Entities created&#10;Interface user created" />
     <MESSAGE value="User tests completed" />
     <MESSAGE value="LoginFrame design, Application first tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginFrame design, Application first tests" />
+    <MESSAGE value="LoginFrame design edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginFrame design edited" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest__1_.ic" NAME="DataAccessTest (1) Coverage Results" MODIFIED="1676745339583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

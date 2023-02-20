@@ -1,7 +1,9 @@
 package app;
 
 
-public class Application {
+import app.gui.LoginFrame;
+
+public class Application implements Runnable{
     private Mode mode;
     public Mode getMode() {
         return mode;
@@ -11,5 +13,11 @@ public class Application {
 
     public Application(Mode mode) {
         setMode(mode);
+    }
+
+    @Override
+    public void run() {
+        LoginFrame loginFrame = new LoginFrame();
+        loginFrame.setVisible(true);
     }
 }
