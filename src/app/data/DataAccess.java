@@ -8,12 +8,12 @@ public class DataAccess {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        Connection connection = DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:3306",
+        return DriverManager.getConnection(
+                "jdbc:mysql://127.0.0.1:3306/coffee_bar_managment",
                 "root",
                 "AbbeyRoad69"
         );
-
-        return connection;
     }
+
+
 }

@@ -2,6 +2,17 @@ package app.gui;
 
 import javax.swing.*;
 import app.Mode;
+import app.data.DataAccess;
+import app.data.DataQuery;
+import app.entities.Employee;
+import app.entities.User;
+import app.entities.exceptions.UserNotExistException;
+import app.gui.exceptions.LoginException;
+
+import java.awt.*;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.Queue;
 
 public class LoginFrame extends JFrame{
     private JLabel titleLabel;
@@ -15,8 +26,9 @@ public class LoginFrame extends JFrame{
 
     public LoginFrame() {
         frameSetup();
+        setButtonConfiguration();
 
-        applicationMode = null;
+        setApplicationMode(null);
     }
 
     private void frameSetup() {
@@ -36,15 +48,69 @@ public class LoginFrame extends JFrame{
         this.setLocationRelativeTo(null);
     }
 
-    // === Actual code begins there ===
+    private void setButtonConfiguration() {
+        btnLogin.addActionListener(e -> { btnLogin_click(); });
+        btnCancel.addActionListener(e -> { btnCancel_click(); });
+    }
 
-    public Mode applicationMode;
-
+    private Mode applicationMode;
     public Mode getApplicationMode() {
         return applicationMode;
     }
-
     public void setApplicationMode(Mode applicationMode) {
         this.applicationMode = applicationMode;
+    }
+
+    private void btnCancel_click() {
+        System.exit(0);
+    }
+
+    private void btnLogin_click() {
+
+        Employee employee;
+        try {
+            employee = doLogin(jtfUserId.getText(), jtfPassword.getText());
+
+            if (employee == null) {
+                lblOutput.setForeground(Color.red);
+                lblOutput.setText("Wrong username or password");
+                return;
+            }
+
+        } catch (LoginException ex) {
+            lblOutput.setForeground(Color.red);
+            lblOutput.setText("Login failed because of connection error");
+            return;
+        } catch(NumberFormatException ex) {
+            lblOutput.setForeground(Color.red);
+            lblOutput.setText("User Id input should be in integer format");
+            return;
+        }
+
+        lblOutput.setForeground(Color.green);
+        lblOutput.setText("Login successfull");
+    }
+
+    private Employee doLogin(String loginIdString, String loginPasswordString)
+            throws LoginException, NumberFormatException{
+
+        // Id input should be int type, so it has to be checked
+        int idInput = Integer.parseInt(loginIdString);
+
+        // Here we have data and we need to get user from database
+        DataAccess dataAccess = new DataAccess();
+        DataQuery dataQuery = new DataQuery(dataAccess);
+
+        // New employee instance
+        Employee employee;
+        try {
+            employee = dataQuery.getEmployee(idInput, loginPasswordString);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new LoginException();
+        } catch (UserNotExistException e) {
+            return null;
+        }
+
+        return employee;
     }
 }

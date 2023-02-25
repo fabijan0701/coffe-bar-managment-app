@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="LoginFrame design edited and added implementation of Runnable interface">
+      <change afterPath="$PROJECT_DIR$/src/app/data/DataQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/entities/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/entities/exceptions/UserNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/gui/exceptions/LoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/data/DataQueryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/entities/EmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +28,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,32 +74,16 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.data" />
+      <recent name="test.entities" />
       <recent name="test.gui" />
       <recent name="test.app" />
-      <recent name="test.entities" />
-      <recent name="test.data" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="coffee bar managment app" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApplicationTest.mode_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="coffee bar managment app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.app" />
-      <option name="MAIN_CLASS_NAME" value="test.app.ApplicationTest" />
-      <option name="METHOD_NAME" value="mode_test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,7 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFrameTest.nullModeReturnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginFrameTest.doLoginDoesNotReturnUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
         <pattern>
@@ -118,23 +113,40 @@
       </extension>
       <option name="PACKAGE_NAME" value="test.gui" />
       <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
-      <option name="METHOD_NAME" value="nullModeReturnTest" />
+      <option name="METHOD_NAME" value="doLoginDoesNotReturnUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginFrameTest.doLoginReturnsEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.entities.*" />
+          <option name="PATTERN" value="test.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.entities" />
-      <option name="MAIN_CLASS_NAME" value="test.entities.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="test.gui" />
+      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
+      <option name="METHOD_NAME" value="doLoginReturnsEmployeeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginFrameTest.doLoginThrowsParsingExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coffee bar managment app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.gui" />
+      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
+      <option name="METHOD_NAME" value="doLoginThrowsParsingExceptionTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LoginFrameTest.nullModeReturnTest" />
+        <item itemvalue="JUnit.LoginFrameTest.doLoginDoesNotReturnUserTest" />
         <item itemvalue="JUnit.LoginFrameTest" />
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.ApplicationTest.mode_test" />
+        <item itemvalue="JUnit.LoginFrameTest.doLoginThrowsParsingExceptionTest" />
+        <item itemvalue="JUnit.LoginFrameTest.doLoginReturnsEmployeeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -224,24 +236,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="LoginFrame design edited and added implementation of Runnable interface" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$LoginFrameTest.ic" NAME="LoginFrameTest Coverage Results" MODIFIED="1676934020125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$All_in_coffee_bar_managment_app.ic" NAME="All in coffee bar managment app Coverage Results" MODIFIED="1676749855238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$ApplicationTest.ic" NAME="ApplicationTest Coverage Results" MODIFIED="1676926705674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.app.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$EmployeeTest.ic" NAME="EmployeeTest Coverage Results" MODIFIED="1677063882452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.data.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_in_coffee_bar_managment_app.ic" NAME="test in coffee bar managment app Coverage Results" MODIFIED="1677099278456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$LoginFrameTest.ic" NAME="LoginFrameTest Coverage Results" MODIFIED="1677342625974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.gui.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest__1_.ic" NAME="DataAccessTest (1) Coverage Results" MODIFIED="1676745339583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.data.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataQueryTest.ic" NAME="DataQueryTest Coverage Results" MODIFIED="1677099239376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.data.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_entities_in_coffee_bar_managment_app.ic" NAME="test.entities in coffee bar managment app Coverage Results" MODIFIED="1677180961568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.entities.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest.ic" NAME="DataAccessTest Coverage Results" MODIFIED="1676744628971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.data.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$All_in_coffee_bar_managment_app.ic" NAME="All in coffee bar managment app Coverage Results" MODIFIED="1676749855238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$ApplicationTest.ic" NAME="ApplicationTest Coverage Results" MODIFIED="1676926705674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.app.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataQueryTest_employeeNullTest.ic" NAME="DataQueryTest.employeeNullTest Coverage Results" MODIFIED="1677065975643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.data.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1676749712145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1677180871319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$LoginFrameTest_doLoginDoesNotReturnUserTest.ic" NAME="LoginFrameTest.doLoginDoesNotReturnUserTest Coverage Results" MODIFIED="1677342721657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.gui.*</FILTER>
     </SUITE>
   </component>
 </project>
