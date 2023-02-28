@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="LoginFrame design edited and added implementation of Runnable interface">
-      <change afterPath="$PROJECT_DIR$/src/app/data/DataQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/entities/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/entities/exceptions/UserNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/gui/exceptions/LoginException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/data/DataQueryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/entities/EmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" afterDir="false" />
+    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="Employee login done and tested">
+      <change afterPath="$PROJECT_DIR$/src/app/entities/Administrator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/data/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data/DataQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/DataQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/data/DataQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/data/DataQueryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,7 @@
       <recent name="test.app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DataQueryTest.rightAdministratorTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="coffee bar managment app" />
@@ -88,64 +80,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataQueryTest.adminNotNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.gui.*" />
+          <option name="PATTERN" value="test.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.gui" />
-      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginFrameTest.doLoginDoesNotReturnUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="coffee bar managment app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.gui" />
-      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
-      <option name="METHOD_NAME" value="doLoginDoesNotReturnUserTest" />
+      <option name="PACKAGE_NAME" value="test.data" />
+      <option name="MAIN_CLASS_NAME" value="test.data.DataQueryTest" />
+      <option name="METHOD_NAME" value="adminNotNullTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFrameTest.doLoginReturnsEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataQueryTest.adminNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.gui.*" />
+          <option name="PATTERN" value="test.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.gui" />
-      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
-      <option name="METHOD_NAME" value="doLoginReturnsEmployeeTest" />
+      <option name="PACKAGE_NAME" value="test.data" />
+      <option name="MAIN_CLASS_NAME" value="test.data.DataQueryTest" />
+      <option name="METHOD_NAME" value="adminNullTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFrameTest.doLoginThrowsParsingExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataQueryTest.employeeDoesenNotExistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coffee bar managment app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.gui.*" />
+          <option name="PATTERN" value="test.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.gui" />
-      <option name="MAIN_CLASS_NAME" value="test.gui.LoginFrameTest" />
-      <option name="METHOD_NAME" value="doLoginThrowsParsingExceptionTest" />
+      <option name="PACKAGE_NAME" value="test.data" />
+      <option name="MAIN_CLASS_NAME" value="test.data.DataQueryTest" />
+      <option name="METHOD_NAME" value="employeeDoesenNotExistsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataQueryTest.rightAdministratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coffee bar managment app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.data" />
+      <option name="MAIN_CLASS_NAME" value="test.data.DataQueryTest" />
+      <option name="METHOD_NAME" value="rightAdministratorTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataQueryTest.rightAdministratorTest" />
+        <item itemvalue="JUnit.DataQueryTest.employeeDoesenNotExistsTest" />
+        <item itemvalue="JUnit.DataQueryTest.adminNullTest" />
+        <item itemvalue="JUnit.DataQueryTest.adminNotNullTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LoginFrameTest.doLoginDoesNotReturnUserTest" />
-        <item itemvalue="JUnit.LoginFrameTest" />
-        <item itemvalue="JUnit.LoginFrameTest.doLoginThrowsParsingExceptionTest" />
-        <item itemvalue="JUnit.LoginFrameTest.doLoginReturnsEmployeeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +239,7 @@
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.data.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_in_coffee_bar_managment_app.ic" NAME="test in coffee bar managment app Coverage Results" MODIFIED="1677099278456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_in_coffee_bar_managment_app.ic" NAME="test in coffee bar managment app Coverage Results" MODIFIED="1677345265936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$LoginFrameTest.ic" NAME="LoginFrameTest Coverage Results" MODIFIED="1677342625974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

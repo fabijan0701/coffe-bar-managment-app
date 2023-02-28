@@ -1,0 +1,101 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,19 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="LoginFrame design edited and added implementation of Runnable interface">
+-      <change afterPath="$PROJECT_DIR$/src/app/data/DataQuery.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/entities/Employee.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/entities/exceptions/UserNotExistException.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/gui/exceptions/LoginException.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/data/DataQueryTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/entities/EmployeeTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_2_2023__21_01__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_2_2023__23_50__Changes_.xml" afterDir="false" />
++    <list default="true" id="11f93dcd-7727-4707-94cc-f6710bcef193" name="Changes" comment="Employee login done and tested">
++      <change afterPath="$PROJECT_DIR$/src/app/entities/Administrator.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/data/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/DataAccess.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gui/LoginFrame.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/gui/LoginFrameTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,7 +26,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="employee-login" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -153,11 +143,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main" />
++        <item itemvalue="JUnit.LoginFrameTest.doLoginThrowsParsingExceptionTest" />
++        <item itemvalue="JUnit.LoginFrameTest.doLoginReturnsEmployeeTest" />
+         <item itemvalue="JUnit.LoginFrameTest.doLoginDoesNotReturnUserTest" />
+         <item itemvalue="JUnit.LoginFrameTest" />
+-        <item itemvalue="JUnit.LoginFrameTest.doLoginThrowsParsingExceptionTest" />
+-        <item itemvalue="JUnit.LoginFrameTest.doLoginReturnsEmployeeTest" />
++        <item itemvalue="Application.Main" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -212,7 +202,13 @@
+       <option name="presentableId" value="LOCAL−00007" />
+       <updated>1676935431117</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL−00008" summary="Employee login done and tested">
++      <created>1677343071781</created>
++      <option name="number" value="LOCAL−00008" />
++      <option name="presentableId" value="LOCAL−00008" />
++      <updated>1677343071781</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -233,7 +229,8 @@
+     <MESSAGE value="LoginFrame design, Application first tests" />
+     <MESSAGE value="LoginFrame design edited" />
+     <MESSAGE value="LoginFrame design edited and added implementation of Runnable interface" />
+-    <option name="LAST_COMMIT_MESSAGE" value="LoginFrame design edited and added implementation of Runnable interface" />
++    <MESSAGE value="Employee login done and tested" />
++    <option name="LAST_COMMIT_MESSAGE" value="Employee login done and tested" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$All_in_coffee_bar_managment_app.ic" NAME="All in coffee bar managment app Coverage Results" MODIFIED="1676749855238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+@@ -246,7 +243,7 @@
+     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$DataAccessTest_connectionNotNull_test__1_.ic" NAME="DataAccessTest.connectionNotNull_test (1) Coverage Results" MODIFIED="1676745486422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>test.data.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_in_coffee_bar_managment_app.ic" NAME="test in coffee bar managment app Coverage Results" MODIFIED="1677099278456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/coffee_bar_managment_app$test_in_coffee_bar_managment_app.ic" NAME="test in coffee bar managment app Coverage Results" MODIFIED="1677345265936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>test.*</FILTER>
+     </SUITE>
+     <SUITE FILE_PATH="coverage/coffee_bar_managment_app$LoginFrameTest.ic" NAME="LoginFrameTest Coverage Results" MODIFIED="1677342625974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+Index: src/app/entities/Administrator.java
+===================================================================
+diff --git a/src/app/entities/Administrator.java b/src/app/entities/Administrator.java
+new file mode 100644
+--- /dev/null	
++++ b/src/app/entities/Administrator.java	
+@@ -0,0 +1,6 @@
++package app.entities;
++
++public class Administrator extends User{
++
++
++}
