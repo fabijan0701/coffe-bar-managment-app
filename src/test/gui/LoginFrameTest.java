@@ -1,6 +1,7 @@
 package test.gui;
 
 import app.Mode;
+import app.entities.Administrator;
 import app.entities.Employee;
 import app.gui.LoginFrame;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoginFrameTest {
 
+    // === Universal ===
     @Test
     public void nullModeReturnTest() {
 
@@ -40,32 +42,12 @@ class LoginFrameTest {
     }
 
 
-    public Method get_doLogin_method() throws NoSuchMethodException {
-        Method method = LoginFrame.class.getDeclaredMethod(
-                "doLogin", String.class, String.class
-        );
-        method.setAccessible(true);
-        return method;
-    }
-
-    @Test
-    public void doLoginReturnsEmployeeTest()
-            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-
-        Method method = get_doLogin_method();
-        Employee actualEmployee = (Employee) method.invoke(
-                new LoginFrame(),
-                new Object[] { "212323", "jure3344" }
-        );
-
-        assertNotNull(actualEmployee);
-    }
-
+    // ===== Employee =====
     @Test
     public void doLoginThrowsParsingExceptionTest()
             throws NoSuchMethodException{
 
-        Method method = get_doLogin_method();
+        Method method = get_doEmployeeLogin_method();
 
         Exception e = assertThrows(
                 InvocationTargetException.class,
@@ -78,11 +60,40 @@ class LoginFrameTest {
         assertEquals(e.getMessage(), new NumberFormatException().getMessage());
     }
 
+
+    public Method get_doEmployeeLogin_method() throws NoSuchMethodException {
+        Method method = LoginFrame.class.getDeclaredMethod(
+                "doEmployeeLogin", String.class, String.class);
+        method.setAccessible(true);
+        return method;
+    }
+
     @Test
-    public void doLoginDoesNotReturnUserTest()
+    public void doLoginReturnsEmployeeTest()
             throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 
-        Method method = get_doLogin_method();
+        // expected
+        String expectedIdInput = "212323";
+        String expectedPasswordInput = "jure3344";
+
+        // actual
+        Method method = get_doEmployeeLogin_method();
+        Employee actualEmployee = (Employee) method.invoke(
+                new LoginFrame(),
+                new Object[] { expectedIdInput, expectedPasswordInput }
+        );
+
+        // assertions
+        assertNotNull(actualEmployee);
+        assertEquals(Integer.parseInt(expectedIdInput), actualEmployee.getId());
+        assertEquals(expectedPasswordInput, actualEmployee.getAccessKey());
+    }
+
+    @Test
+    public void doLoginDoesNotReturnEmployeeTest()
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        Method method = get_doEmployeeLogin_method();
         Employee employee = (Employee) method.invoke(
                 new LoginFrame(),
                 new Object[] { "22222", "jjjjjj" }
@@ -90,4 +101,69 @@ class LoginFrameTest {
 
         assertNull(employee);
     }
+
+
+    // ===== Administrator =====
+    public Method get_doAdministratorLogin_method() throws NoSuchMethodException {
+        Method method = LoginFrame.class.getDeclaredMethod(
+                "doAdministratorLogin", String.class, String.class);
+        method.setAccessible(true);
+        return method;
+    }
+
+    @Test
+    void doLoginReturnsAdministratorTest()
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        // expected
+        String adminIdInput = "123321";
+        String adminPasswordInput = "fabo0701";
+
+        // actual
+        Method method = get_doAdministratorLogin_method();
+        Administrator testAdmin = (Administrator) method.invoke(
+                new LoginFrame(),
+                new Object[]{adminIdInput, adminPasswordInput}
+        );
+
+        // test cases
+        assertNotNull(testAdmin);
+        assertEquals(Integer.parseInt(adminIdInput), testAdmin.getId());
+        assertEquals(adminPasswordInput, testAdmin.getAccessKey());
+    }
+
+    @Test
+    void doLoginDoesNotReturnAdministratorTest()
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        // expected
+        String adminIdInput = "123321";
+        String adminPasswordInput = "x";
+
+        // actual
+        Method method = get_doAdministratorLogin_method();
+        Administrator testAdmin = (Administrator) method.invoke(
+                new LoginFrame(),
+                new Object[]{adminIdInput, adminPasswordInput}
+        );
+
+        // test cases
+        assertNull(testAdmin);
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

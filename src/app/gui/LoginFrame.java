@@ -4,15 +4,13 @@ import javax.swing.*;
 import app.Mode;
 import app.data.DataAccess;
 import app.data.DataQuery;
+import app.entities.Administrator;
 import app.entities.Employee;
-import app.entities.User;
 import app.entities.exceptions.UserNotExistException;
 import app.gui.exceptions.LoginException;
 
 import java.awt.*;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.util.Queue;
 
 public class LoginFrame extends JFrame{
     private JLabel titleLabel;
@@ -69,7 +67,7 @@ public class LoginFrame extends JFrame{
 
         Employee employee;
         try {
-            employee = doLogin(jtfUserId.getText(), jtfPassword.getText());
+            employee = doEmployeeLogin(jtfUserId.getText(), jtfPassword.getText());
 
             if (employee == null) {
                 lblOutput.setForeground(Color.red);
@@ -91,7 +89,7 @@ public class LoginFrame extends JFrame{
         lblOutput.setText("Login successfull");
     }
 
-    private Employee doLogin(String loginIdString, String loginPasswordString)
+    private Employee doEmployeeLogin(String loginIdString, String loginPasswordString)
             throws LoginException, NumberFormatException{
 
         // Id input should be int type, so it has to be checked
@@ -112,5 +110,28 @@ public class LoginFrame extends JFrame{
         }
 
         return employee;
+    }
+
+    private Administrator doAdministratorLogin(String loginIdString, String loginPasswordString)
+            throws LoginException {
+
+        // Id input should be int type, so it has to be checked
+        int idInput = Integer.parseInt(loginIdString);
+
+        // Here we have data and we need to get user from database
+        DataAccess dataAccess = new DataAccess();
+        DataQuery dataQuery = new DataQuery(dataAccess);
+
+        // New employee instance
+        Administrator admin;
+        try {
+            admin = dataQuery.getAdministrator(idInput, loginPasswordString);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new LoginException();
+        } catch (UserNotExistException e) {
+            return null;
+        }
+
+        return admin;
     }
 }
